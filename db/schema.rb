@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_16_051709) do
     t.text "profile", null: false
     t.text "occupation", null: false
     t.text "position", null: false
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

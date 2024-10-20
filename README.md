@@ -13,12 +13,8 @@
 
 ### Association
 
-- has_many :prototypes_users
-- 
-- 
-- 
-- 
-- 
+- has_many :prototypes
+- has_many :comments
 
 ## prototypes テーブル
 
@@ -31,7 +27,8 @@
 
 ### Association
 
-- 
+- belongs_to :user
+- has_many :comments
 
 ## comments テーブル
 
@@ -40,3 +37,8 @@
 | content   | text       | NOT NULL        |
 | prototype | references | NOT NULL,外部キー |
 | user      | references | NOT NULL,外部キー |
+
+### Association
+
+- belongs_to :prototype
+- belongs_to :user
